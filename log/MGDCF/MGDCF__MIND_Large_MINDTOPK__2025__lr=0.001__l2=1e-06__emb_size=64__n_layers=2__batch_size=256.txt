@@ -1,0 +1,139 @@
+2025-12-18 01:17:00,262 - --------------------------------------------- BEGIN: 2025-12-18 01:17:00 ---------------------------------------------
+2025-12-18 01:17:00,262 - 
+==========================================
+ Arguments          | Values              
+==========================================
+ alpha              | 0.1                
+ batch_size         | 256                
+ beta               | 0.9                
+ data_appendix      |                    
+ dataset            | MIND_Large/MINDTOPK
+ dropout            | 0                  
+ early_stop         | 10                 
+ emb_size           | 64                 
+ epoch              | 200                
+ eval_batch_size    | 256                
+ gpu                | 0                  
+ l2                 | 1e-06              
+ lr                 | 0.001              
+ main_metric        |                    
+ n_layers           | 2                  
+ num_neg            | 1                  
+ num_workers        | 5                  
+ optimizer          | Adam               
+ random_seed        | 2025               
+ save_final_results | 1                  
+ test_all           | 0                  
+ topk               | 5,10,20,50         
+==========================================
+2025-12-18 01:17:00,265 - Device: cuda
+2025-12-18 01:17:00,265 - Generating corpus (First run may take time)...
+2025-12-18 01:17:00,265 - Reading data from "/home/neuro/MGDCF_in_ReChorus-master/data", dataset = "MIND_Large/MINDTOPK" 
+2025-12-18 01:17:00,681 - Counting dataset statistics...
+2025-12-18 01:17:00,700 - "# user": 16526, "# item": 2817, "# entry": 163861
+2025-12-18 01:17:00,750 - Save corpus to /home/neuro/MGDCF_in_ReChorus-master/data/MIND_Large/MINDTOPK/BaseReader.pkl
+2025-12-18 01:17:03,776 - #params: 1238080
+2025-12-18 01:17:03,776 - MGDCF(
+  (encoder): MGDCFEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.cuda.FloatTensor of size 2818x64 (cuda:0)]
+        (user_emb): Parameter containing: [torch.cuda.FloatTensor of size 16527x64 (cuda:0)]
+    )
+  )
+)
+2025-12-18 13:08:04,942 - --------------------------------------------- BEGIN: 2025-12-18 13:08:04 ---------------------------------------------
+2025-12-18 13:08:04,942 - 
+==========================================
+ Arguments          | Values              
+==========================================
+ alpha              | 0.1                
+ batch_size         | 256                
+ beta               | 0.9                
+ data_appendix      |                    
+ dataset            | MIND_Large/MINDTOPK
+ dropout            | 0                  
+ early_stop         | 10                 
+ emb_size           | 64                 
+ epoch              | 200                
+ eval_batch_size    | 256                
+ gpu                | 0                  
+ l2                 | 1e-06              
+ lr                 | 0.001              
+ main_metric        |                    
+ n_layers           | 2                  
+ num_neg            | 1                  
+ num_workers        | 5                  
+ optimizer          | Adam               
+ random_seed        | 2025               
+ save_final_results | 1                  
+ test_all           | 0                  
+ topk               | 5,10,20,50         
+==========================================
+2025-12-18 13:08:04,946 - Device: cuda
+2025-12-18 13:08:04,946 - Load corpus from /home/neuro/MGDCF_in_ReChorus-master/data/MIND_Large/MINDTOPK/BaseReader.pkl
+2025-12-18 13:08:07,937 - #params: 1238080
+2025-12-18 13:08:07,937 - MGDCF(
+  (encoder): MGDCFEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.cuda.FloatTensor of size 2818x64 (cuda:0)]
+        (user_emb): Parameter containing: [torch.cuda.FloatTensor of size 16527x64 (cuda:0)]
+    )
+  )
+)
+2025-12-18 13:08:08,164 - Test Before Training: (HR@5:0.0598,NDCG@5:0.0370,HR@10:0.1049,NDCG@10:0.0516,HR@20:0.1873,NDCG@20:0.0723,HR@50:0.4990,NDCG@50:0.1325)
+2025-12-18 13:08:08,235 - Optimizer: Adam
+2025-12-18 13:08:18,929 - Epoch 1     loss=0.4349 [10.5 s]	dev=(HR@5:0.0350,NDCG@5:0.0205) [0.2 s] *
+2025-12-18 13:08:29,058 - Epoch 2     loss=0.3943 [9.9 s]	dev=(HR@5:0.0356,NDCG@5:0.0208) [0.2 s] *
+2025-12-18 13:08:39,520 - Epoch 3     loss=0.3907 [10.2 s]	dev=(HR@5:0.0362,NDCG@5:0.0210) [0.2 s] *
+2025-12-18 13:08:50,031 - Epoch 4     loss=0.3859 [10.3 s]	dev=(HR@5:0.0356,NDCG@5:0.0210) [0.2 s]
+2025-12-18 13:09:00,490 - Epoch 5     loss=0.3841 [10.2 s]	dev=(HR@5:0.0362,NDCG@5:0.0216) [0.2 s] *
+2025-12-18 13:09:10,658 - Epoch 6     loss=0.3778 [9.9 s]	dev=(HR@5:0.0405,NDCG@5:0.0234) [0.3 s] *
+2025-12-18 13:09:20,766 - Epoch 7     loss=0.3643 [9.9 s]	dev=(HR@5:0.0439,NDCG@5:0.0249) [0.2 s] *
+2025-12-18 13:09:30,874 - Epoch 8     loss=0.3499 [9.8 s]	dev=(HR@5:0.0475,NDCG@5:0.0265) [0.2 s] *
+2025-12-18 13:09:41,021 - Epoch 9     loss=0.3426 [9.9 s]	dev=(HR@5:0.0491,NDCG@5:0.0273) [0.3 s] *
+2025-12-18 13:09:51,125 - Epoch 10    loss=0.3361 [9.9 s]	dev=(HR@5:0.0494,NDCG@5:0.0274) [0.2 s] *
+2025-12-18 13:10:01,239 - Epoch 11    loss=0.3347 [9.8 s]	dev=(HR@5:0.0491,NDCG@5:0.0277) [0.2 s] *
+2025-12-18 13:10:11,431 - Epoch 12    loss=0.3299 [9.9 s]	dev=(HR@5:0.0518,NDCG@5:0.0288) [0.2 s] *
+2025-12-18 13:10:21,583 - Epoch 13    loss=0.3251 [9.9 s]	dev=(HR@5:0.0525,NDCG@5:0.0292) [0.2 s] *
+2025-12-18 13:10:31,742 - Epoch 14    loss=0.3201 [9.9 s]	dev=(HR@5:0.0525,NDCG@5:0.0294) [0.2 s] *
+2025-12-18 13:10:41,922 - Epoch 15    loss=0.3161 [9.9 s]	dev=(HR@5:0.0543,NDCG@5:0.0302) [0.2 s] *
+2025-12-18 13:10:52,189 - Epoch 16    loss=0.3104 [10.0 s]	dev=(HR@5:0.0555,NDCG@5:0.0312) [0.2 s] *
+2025-12-18 13:11:02,331 - Epoch 17    loss=0.3090 [9.9 s]	dev=(HR@5:0.0601,NDCG@5:0.0338) [0.2 s] *
+2025-12-18 13:11:12,538 - Epoch 18    loss=0.3059 [10.0 s]	dev=(HR@5:0.0577,NDCG@5:0.0328) [0.2 s]
+2025-12-18 13:11:22,674 - Epoch 19    loss=0.3021 [9.9 s]	dev=(HR@5:0.0571,NDCG@5:0.0323) [0.3 s]
+2025-12-18 13:11:32,894 - Epoch 20    loss=0.3008 [10.0 s]	dev=(HR@5:0.0580,NDCG@5:0.0329) [0.2 s]
+2025-12-18 13:11:43,002 - Epoch 21    loss=0.2999 [9.9 s]	dev=(HR@5:0.0571,NDCG@5:0.0326) [0.2 s]
+2025-12-18 13:11:53,226 - Epoch 22    loss=0.2999 [10.0 s]	dev=(HR@5:0.0589,NDCG@5:0.0330) [0.2 s]
+2025-12-18 13:12:03,409 - Epoch 23    loss=0.2956 [10.0 s]	dev=(HR@5:0.0601,NDCG@5:0.0337) [0.2 s]
+2025-12-18 13:12:13,605 - Epoch 24    loss=0.2960 [9.9 s]	dev=(HR@5:0.0617,NDCG@5:0.0346) [0.2 s] *
+2025-12-18 13:12:23,821 - Epoch 25    loss=0.2919 [10.0 s]	dev=(HR@5:0.0623,NDCG@5:0.0347) [0.2 s] *
+2025-12-18 13:12:33,937 - Epoch 26    loss=0.2920 [9.9 s]	dev=(HR@5:0.0601,NDCG@5:0.0340) [0.2 s]
+2025-12-18 13:12:44,072 - Epoch 27    loss=0.2897 [9.9 s]	dev=(HR@5:0.0617,NDCG@5:0.0345) [0.2 s]
+2025-12-18 13:12:54,176 - Epoch 28    loss=0.2892 [9.9 s]	dev=(HR@5:0.0644,NDCG@5:0.0357) [0.2 s] *
+2025-12-18 13:13:04,324 - Epoch 29    loss=0.2864 [9.9 s]	dev=(HR@5:0.0629,NDCG@5:0.0349) [0.2 s]
+2025-12-18 13:13:14,383 - Epoch 30    loss=0.2880 [9.8 s]	dev=(HR@5:0.0620,NDCG@5:0.0346) [0.2 s]
+2025-12-18 13:13:24,477 - Epoch 31    loss=0.2851 [9.9 s]	dev=(HR@5:0.0617,NDCG@5:0.0347) [0.2 s]
+2025-12-18 13:13:34,628 - Epoch 32    loss=0.2841 [9.9 s]	dev=(HR@5:0.0601,NDCG@5:0.0342) [0.2 s]
+2025-12-18 13:13:44,807 - Epoch 33    loss=0.2836 [9.9 s]	dev=(HR@5:0.0620,NDCG@5:0.0353) [0.2 s]
+2025-12-18 13:13:55,036 - Epoch 34    loss=0.2814 [10.0 s]	dev=(HR@5:0.0632,NDCG@5:0.0359) [0.2 s] *
+2025-12-18 13:14:05,180 - Epoch 35    loss=0.2829 [9.9 s]	dev=(HR@5:0.0632,NDCG@5:0.0356) [0.2 s]
+2025-12-18 13:14:15,351 - Epoch 36    loss=0.2813 [9.9 s]	dev=(HR@5:0.0620,NDCG@5:0.0351) [0.2 s]
+2025-12-18 13:14:25,482 - Epoch 37    loss=0.2797 [9.9 s]	dev=(HR@5:0.0610,NDCG@5:0.0346) [0.2 s]
+2025-12-18 13:14:35,707 - Epoch 38    loss=0.2788 [10.0 s]	dev=(HR@5:0.0617,NDCG@5:0.0351) [0.2 s]
+2025-12-18 13:14:45,846 - Epoch 39    loss=0.2773 [9.9 s]	dev=(HR@5:0.0610,NDCG@5:0.0349) [0.2 s]
+2025-12-18 13:14:56,012 - Epoch 40    loss=0.2773 [9.9 s]	dev=(HR@5:0.0617,NDCG@5:0.0349) [0.2 s]
+2025-12-18 13:15:06,175 - Epoch 41    loss=0.2759 [9.9 s]	dev=(HR@5:0.0613,NDCG@5:0.0345) [0.2 s]
+2025-12-18 13:15:16,283 - Epoch 42    loss=0.2762 [9.9 s]	dev=(HR@5:0.0613,NDCG@5:0.0340) [0.2 s]
+2025-12-18 13:15:26,420 - Epoch 43    loss=0.2757 [9.9 s]	dev=(HR@5:0.0632,NDCG@5:0.0353) [0.2 s]
+2025-12-18 13:15:26,421 - Early stop at 43 based on dev result.
+2025-12-18 13:15:26,421 - 
+Best Iter(dev)=   34	 dev=(HR@5:0.0632,NDCG@5:0.0359) [438.3 s] 
+2025-12-18 13:15:26,425 - Load model from /home/neuro/MGDCF_in_ReChorus-master/model/MGDCF/MGDCF__MIND_Large_MINDTOPK__2025__lr=0.001__l2=1e-06__emb_size=64__n_layers=2__batch_size=256.pt
+2025-12-18 13:15:26,675 - 
+Dev  After Training: (HR@5:0.0632,NDCG@5:0.0359,HR@10:0.1399,NDCG@10:0.0604,HR@20:0.2552,NDCG@20:0.0893,HR@50:0.5607,NDCG@50:0.1494)
+2025-12-18 13:15:26,833 - 
+Test After Training: (HR@5:0.1049,NDCG@5:0.0610,HR@10:0.1784,NDCG@10:0.0845,HR@20:0.2814,NDCG@20:0.1103,HR@50:0.5284,NDCG@50:0.1591)
+2025-12-18 13:15:27,401 - dev Prediction results saved to: /home/neuro/MGDCF_in_ReChorus-master/log/MGDCF/rec-MGDCF-dev.csv
+2025-12-18 13:15:27,682 - test Prediction results saved to: /home/neuro/MGDCF_in_ReChorus-master/log/MGDCF/rec-MGDCF-test.csv
+2025-12-18 13:15:27,685 - 
+--------------------------------------------- END: 2025-12-18 13:15:27 ---------------------------------------------
