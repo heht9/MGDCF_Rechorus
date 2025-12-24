@@ -41,11 +41,11 @@ LightGCN:```python main.py --gpu -1 --model_name LightGCN --emb_size 64 --n_laye
 BPRMF:```python main.py --gpu -1 --model_name BPRMF --emb_size 64 --lr 1e-3 --l2 1e-6 --dataset MIND_Large/MINDTOPK```<br>
 所有训练均在Linux环境下进行，也可以在Windows下运行，训练时间较长，请耐心等待。
 我们提供了批量运行脚本 run_experiments.sh，可以一次性运行所有实验:```chmod +x run_experiments.sh```<br>
-```./run_experiment.sh```<br>
+```./run_experiments.sh```<br>
 ## Supplementary Experiments (补充实验)
 为了深入分析MGDCF模型，我们补充了**超参数实验**与**消融实验**。所有补充实验均在 `Grocery_and_Gourmet_Food` 数据集上进行。
 ### 1. 超参数实验和消融实验
-我们已经运行了 `n_layers=3` 作为主实验。以下是补充运行的命令，用于对比分析：
+我们已经运行了 `n_layers=3` 作为主实验。以下是补充运行的命令，用于对比分析：<br>
 Layer = 1:```python main.py --model_name MGDCF --dataset Grocery_and_Gourmet_Food --lr 1e-3 --l2 1e-6 --alpha 0.1 --beta 0.9 --n_layers 1 --epoch 50```<br>
 Layer = 2:```python main.py --model_name MGDCF --dataset Grocery_and_Gourmet_Food --lr 1e-3 --l2 1e-6 --alpha 0.1 --beta 0.9 --n_layers 2 --epoch 50```<br>
 Layer = 4:```python main.py --model_name MGDCF --dataset Grocery_and_Gourmet_Food --lr 1e-3 --l2 1e-6 --alpha 0.1 --beta 0.9 --n_layers 4 --epoch 50```<br>
